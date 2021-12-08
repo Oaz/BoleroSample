@@ -31,4 +31,3 @@ jobs:
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
           local-dir: ./BoleroSample.Client/bin/Release/net5.0/publish/wwwroot/
-          dry-run: true
