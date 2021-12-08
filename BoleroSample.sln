@@ -1,0 +1,29 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30114.105
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "BoleroSample.Client", "BoleroSample.Client\BoleroSample.Client.fsproj", "{EF4647FF-21C0-471D-8538-B1521BEF195F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "misc", "misc", "{B1ED403E-8A98-4C3C-A39F-CEBE988D4CBC}"
+ProjectSection(SolutionItems) = preProject
+	.gitignore = .gitignore
+	README.md = README.md
+	.github\workflows\CI.yml = .github\workflows\CI.yml
+EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EF4647FF-21C0-471D-8538-B1521BEF195F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EF4647FF-21C0-471D-8538-B1521BEF195F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EF4647FF-21C0-471D-8538-B1521BEF195F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EF4647FF-21C0-471D-8538-B1521BEF195F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

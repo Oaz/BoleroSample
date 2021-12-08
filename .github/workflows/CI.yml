@@ -1,0 +1,34 @@
+name: CI
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+
+      - name: Checkout code
+        uses: actions/checkout@v2
+          
+      - name: Setup .NET Core
+        uses: actions/setup-dotnet@v1
+        with:
+          dotnet-version: 5.0.202
+          
+      - name: Build wasm app
+        run: dotnet publish --configuration Release
+        
+      - name: Deploy to static web server
+        uses: SamKirkland/FTP-Deploy-Action@4.2.0
+        env:
+          server: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          local-dir: ./BoleroSample.Client/bin/Release/net5.0/publish/wwwroot
+          dry-run: true
